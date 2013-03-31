@@ -107,7 +107,7 @@ public class LocalService extends Service {
 			} else {
 				if (mSelectedApp.packageName.equals("about")) {
 					if (action == KeyEvent.ACTION_DOWN) {
-						sendNotification("Pebble MITM", "Pebble MITM (Man in the Middle) allows one to use the Pebble Music application to control other applications.");
+						sendNotification("Pebble MITM", "Pebble MITM (Man in the Middle) allows one to use the Pebble Music application to control other applications.\n\nCopyright (c) 2013 Baruch Hayman");
 						mSelectedApp = null;
 						displayMenu();
 					}
