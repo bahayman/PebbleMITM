@@ -32,6 +32,10 @@ public class MainActivity extends Activity {
 		final List<ResolveInfo> list = getPackageManager()
 				.queryBroadcastReceivers(intent, 60);
 		for (ResolveInfo resolveInfo : list) {
+			if (resolveInfo.activityInfo.packageName.equals(getPackageName())) {
+				list.remove(resolveInfo);
+				continue;
+			}
 			musicApplicationList.add(resolveInfo.activityInfo.applicationInfo.loadLabel(
 					getPackageManager()).toString());
 			if (resolveInfo.activityInfo.packageName
